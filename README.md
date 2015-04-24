@@ -5,7 +5,7 @@ A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 This code illustrates a mechanism to filter DSpace items by use case and item properties.
 
 The code allows a set of use case filters to be defined.
-https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/filter/ItemFilterDefs.java
+* [Enum defining available filters to be applied to a collection of items](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/filter/ItemFilterDefs.java)
 
 These filters are accessible by a new REST API verb **filters**.
 
@@ -13,9 +13,8 @@ Each DSpace collection can be queried by supplying one or more filters using the
 
 ### Sample Client
 
-Code: https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient
-
-Screen Shots: https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.1
+* [Sample Client Code](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient)
+* [Sample Client Screen Shots](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.1)
 
 #### API Calls in the Sample Client
 * [List all available filters - new](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L28)
@@ -25,8 +24,7 @@ Screen Shots: https://github.com/Georgetown-University-Libraries/DSpaceRestQCRep
 
 ### REST API Enhancements (based on DSpace 4.3 REST API)
 
-https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/dspace/modules/rest/src/main/java/org/dspace/rest
-
+* [Additional code needed in the REST API to support these capabilities](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/dspace/modules/rest/src/main/java/org/dspace/rest)
 
 # License 
 License information is contained below.
