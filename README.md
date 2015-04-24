@@ -11,6 +11,17 @@ These filters are accessible by a new REST API verb **filters**.
 
 Each DSpace collection can be queried by supplying one or more filters using the REST API verb **filtered-collections** with a parameter of **filters**.
 
+### Sample Client
+
+Code: https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient
+
+Screen Shots: https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.1
+
+### REST API Enhancements (based on DSpace 4.3 REST API)
+
+https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/dspace/modules/rest/src/main/java/org/dspace/rest
+
+
 # License 
 License information is contained below.
 
