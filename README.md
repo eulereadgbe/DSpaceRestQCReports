@@ -1,13 +1,15 @@
-# A proposed reporting tool for DSpace based on the DSpace 4.x REST api
+# Proposed REST API based reporting tool for DSpace
+
+A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 
 This code illustrates a mechanism to filter DSpace items by use case and item properties.
 
 The code allows a set of use case filters to be defined.
 https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/filter/ItemFilterDefs.java
 
-These filters are accessible by a new REST API verb *filters*.
+These filters are accessible by a new REST API verb **filters**.
 
-Each DSpace collection can be queried by supplying one or more filters using the REST API verb *filtered-collections* with a parameter of *filters*.
+Each DSpace collection can be queried by supplying one or more filters using the REST API verb **filtered-collections** with a parameter of **filters**.
 
 # License 
 License information is contained below.
