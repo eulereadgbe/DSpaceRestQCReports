@@ -17,6 +17,12 @@ Code: https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tre
 
 Screen Shots: https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.1
 
+#### API Calls in the Sample Client
+* [List all available filters - new](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L28)
+* [List all collections](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L55)
+* [Get counts for each selected filter for a collection](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L112)
+* [Get items within a collection for a specific filter](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L167)
+
 ### REST API Enhancements (based on DSpace 4.3 REST API)
 
 https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/dspace/modules/rest/src/main/java/org/dspace/rest
