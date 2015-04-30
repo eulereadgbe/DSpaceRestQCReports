@@ -11,14 +11,16 @@ The code allows a set of use case filters to be defined.
 
 ### Collections Filter Client
 
-* [Sample Client Code](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/index.html)
+* [Sample Filter Client Page](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/index.html)
+* [Sample Filter Client JS](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/restCommon.js)
 * [Sample Client Screen Shots](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.1)
 
 ## Metadata Query Tool
 
 This tool allows a user to query for items based on the presence of one or more metadata fields within an item.  The tool supports 8 operators: exists, doesn't exist, equals, not equals, like, not like, matches, doesn't match.  More than one operation can be provided.
 
-* [Sample Query Tool Client Code](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/query.html)
+* [Sample Query Tool Client Page](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/query.html)
+* [Sample Query Tool Client JS](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/restQuery.js)
 * [Sample Query Tool Client Screen Shots](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.2)
 
 
