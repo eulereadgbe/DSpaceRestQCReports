@@ -32,7 +32,7 @@ This tool allows a user to query for items based on the presence of one or more 
 * __/filters__ - Return a set of pre-defined filters for items of interest
 * __/filtered-collections__ - Return items / item counts within a collection that satisfy a filter
 * __/filtered-items__ - Return items that match a metadata query
-* 
+
 # License 
 License information is contained below.
 
