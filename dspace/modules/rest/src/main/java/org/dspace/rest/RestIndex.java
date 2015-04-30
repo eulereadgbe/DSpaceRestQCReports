@@ -42,6 +42,7 @@ public class RestIndex {
                   "<li><a href='" + servletContext.getContextPath() + "/metadataregistry'>/metadataregistry</a></li>" +
                   "<li><a href='" + servletContext.getContextPath() + "/filters'>/filters</a></li>" +
                   "<li><a href='" + servletContext.getContextPath() + "/filtered-collections/1'>/filtered-collections/1</a></li>" +
+                  "<li><a href='" + servletContext.getContextPath() + "/filtered-items'>/filtered-items</a></li>" +
                 "</ul>" +
                 "</body></html> ";
     }

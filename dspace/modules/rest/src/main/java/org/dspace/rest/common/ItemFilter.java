@@ -14,6 +14,7 @@ import org.dspace.rest.filter.ItemFilterTest;
 
 import javax.ws.rs.WebApplicationException;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -31,7 +32,10 @@ public class ItemFilter {
     private String filterName = "";
     private String title;
     private String description;
+    private String queryAnnotation;
     private List<Item> items = new ArrayList<Item>();
+    private List<ItemFilterQuery> itemFilterQueries = new ArrayList<ItemFilterQuery>();
+    private List<MetadataEntry> metadata = new ArrayList<MetadataEntry>();
     private Integer itemCount;
     private boolean saveItems = false;
 
@@ -42,7 +46,7 @@ public class ItemFilter {
     
     public static List<ItemFilter> getItemFilters(String filters, boolean saveItems) {
         List<ItemFilter> itemFilters = new ArrayList<ItemFilter>();
-        ItemFilter allFilters = new ItemFilter(ItemFilter.ALL_FILTERS, "Matches all specified filters", "This filter includes all items that matched ALL specified filters");
+        ItemFilter allFilters = new ItemFilter(ItemFilter.ALL_FILTERS, "Matches all specified filters", "This filter includes all items that matched ALL specified filters", saveItems);
 
         if (filters.equals(ALL)) {
             for(ItemFilterDefs itemFilterDef: ItemFilterDefs.values()) {
@@ -84,7 +88,8 @@ public class ItemFilter {
         setup(itemFilterTest.getName(), itemFilterTest.getTitle(), itemFilterTest.getDescription());
     }
     
-    public ItemFilter(String name, String title, String description) throws WebApplicationException{
+    public ItemFilter(String name, String title, String description, boolean saveItems) throws WebApplicationException{
+        this.saveItems = saveItems;
         setup(name, title, description);
     }
 
@@ -152,6 +157,15 @@ public class ItemFilter {
         this.description = description;
     }
 
+    @XmlAttribute(name="query-annotation")
+    public String getQueryAnnotation() {
+        return queryAnnotation;
+    }
+
+    public void setQueryAnnotation(String queryAnnotation) {
+        this.queryAnnotation = queryAnnotation;
+    }
+
     @XmlAttribute(name="item-count")
     public Integer getItemCount() {
         return itemCount;
@@ -169,4 +183,20 @@ public class ItemFilter {
 		this.items = items;
 	}
 
+    public List<ItemFilterQuery> getItemFilterQueries() {
+        return itemFilterQueries;
+    }
+
+    public void setItemFilterQueries(List<ItemFilterQuery> itemFilterQueries) {
+        this.itemFilterQueries = itemFilterQueries;
+    }
+
+    public List<MetadataEntry> getMetadata() {
+        return metadata;
+    }
+
+    @XmlElement(required = true)
+    public void setMetadata(List<MetadataEntry> metadata) {
+        this.metadata = metadata;
+    }
 }

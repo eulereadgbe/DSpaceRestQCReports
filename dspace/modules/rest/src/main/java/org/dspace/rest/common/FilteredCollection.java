@@ -12,6 +12,7 @@ import org.dspace.authorize.AuthorizeManager;
 import org.dspace.content.ItemIterator;
 import org.dspace.core.Context;
 import org.dspace.rest.filter.ItemFilterDefs;
+import org.dspace.rest.filter.ItemFilterSet;
 import org.dspace.rest.filter.ItemFilterTest;
 
 import javax.ws.rs.WebApplicationException;
@@ -74,8 +75,8 @@ public class FilteredCollection extends DSpaceObject {
         }
 
         boolean reportItems = expandFields.contains("items") || expandFields.contains("all");
-        itemFilters = ItemFilter.getItemFilters(filters, reportItems);
-        ItemFilter allFiltersFilter = ItemFilter.getAllFiltersFilter(itemFilters);
+        ItemFilterSet itemFilterSet = new ItemFilterSet(filters, reportItems);
+        itemFilters = itemFilterSet.getItemFilters();
         
         //TODO: Item paging. limit, offset/page
         ItemIterator childItems;
@@ -85,28 +86,8 @@ public class FilteredCollection extends DSpaceObject {
             childItems = collection.getAllItems();
         }
 
-        items = new ArrayList<Item>();
+        items = itemFilterSet.processSaveItems(context, childItems, true, expand);
         
-        
-        while(childItems.hasNext()) {
-            org.dspace.content.Item item = childItems.next();
-            if(AuthorizeManager.authorizeActionBoolean(context, item, org.dspace.core.Constants.READ)) {
-                Item restItem = new Item(item, null, context); 
-                if(reportItems) {
-                    items.add(restItem);
-                }
-                boolean bAllTrue = !itemFilters.isEmpty();
-                for(ItemFilter itemFilter: itemFilters) {
-                    if (itemFilter.hasItemTest()) {
-                        bAllTrue &= itemFilter.testItem(context, item, restItem);                            
-                    }
-                }
-                if (bAllTrue && allFiltersFilter != null) {
-                    allFiltersFilter.addItem(restItem);
-                }
-            }
-        }
-
         if(!expandFields.contains("all")) {
             this.addExpand("all");
         }
