@@ -2,18 +2,16 @@
 
 A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 
+## Collections Filter Report
+
 This code illustrates a mechanism to filter DSpace items by use case and item properties.
 
 The code allows a set of use case filters to be defined.
 * [Enum defining available filters to be applied to a collection of items](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/filter/ItemFilterDefs.java)
 
-These filters are accessible by a new REST API verb **filters**.
+### Collections Filter Client
 
-Each DSpace collection can be queried by supplying one or more filters using the REST API verb **filtered-collections** with a parameter of **filters**.
-
-### Sample Client
-
-* [Sample Client Code](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient)
+* [Sample Client Code](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/index.html)
 * [Sample Client Screen Shots](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.1)
 
 #### API Calls in the Sample Client
@@ -22,9 +20,17 @@ Each DSpace collection can be queried by supplying one or more filters using the
 * [Get counts for each selected filter for a collection](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L112)
 * [Get items within a collection for a specific filter](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L167)
 
-### REST API Enhancements (based on DSpace 4.3 REST API)
+## Metadata Query Tool
 
-* [Additional code needed in the REST API to support these capabilities](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/dspace/modules/rest/src/main/java/org/dspace/rest)
+This tool allows a user to query for items based on the presence of one or more metadata fields within an item.  The tool supports 8 operators: exists, doesn't exist, equals, not equals, like, not like, matches, doesn't match.  More than one operation can be provided.
+
+* [Sample Query Tool Client Code](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/query.html)
+* [Sample Query Tool Client Screen Shots](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.2)
+
+
+### REST API Enhancements Needed For These Reports (based on DSpace 4.3 REST API)
+
+* [Additional code needed in the DSpace REST API to support these capabilities](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/dspace/modules/rest/src/main/java/org/dspace/rest)
 
 # License 
 License information is contained below.
