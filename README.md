@@ -1,7 +1,5 @@
 # Proposed REST API based reporting tool for DSpace
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Waudm-qAtWY" frameborder="0" allowfullscreen></iframe>
-
 A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 
 ## Collections Filter Report
