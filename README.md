@@ -14,12 +14,6 @@ The code allows a set of use case filters to be defined.
 * [Sample Client Code](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/sampleClient/index.html)
 * [Sample Client Screen Shots](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.1)
 
-#### API Calls in the Sample Client
-* [List all available filters - new](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L28)
-* [List all collections](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L55)
-* [Get counts for each selected filter for a collection](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L112)
-* [Get items within a collection for a specific filter](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/4c00475b894e7275961bf0334a5106df781af674/sampleClient/restClient.js#L167)
-
 ## Metadata Query Tool
 
 This tool allows a user to query for items based on the presence of one or more metadata fields within an item.  The tool supports 8 operators: exists, doesn't exist, equals, not equals, like, not like, matches, doesn't match.  More than one operation can be provided.
@@ -28,10 +22,17 @@ This tool allows a user to query for items based on the presence of one or more 
 * [Sample Query Tool Client Screen Shots](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/releases/tag/v0.2)
 
 
-### REST API Enhancements Needed For These Reports (based on DSpace 4.3 REST API)
+## REST API Enhancements Needed For These Reports (based on DSpace 4.3 REST API)
 
 * [Additional code needed in the DSpace REST API to support these capabilities](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/tree/master/dspace/modules/rest/src/main/java/org/dspace/rest)
 
+### New API Calls Needed to Support These Tools
+
+* __/metadataregistry__ - Return the Metadata Registry
+* __/filters__ - Return a set of pre-defined filters for items of interest
+* __/filtered-collections__ - Return items / item counts within a collection that satisfy a filter
+* __/filtered-items__ - Return items that match a metadata query
+* 
 # License 
 License information is contained below.
 
