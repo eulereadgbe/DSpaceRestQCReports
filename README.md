@@ -37,10 +37,10 @@ _The purpose of this client code is to illustrate how quickly a useful client ap
 
 ### New API Calls Needed to Support These Tools
 
-* __/metadataregistry__ - Return the Metadata Registry
-* __/filters__ - Return a set of pre-defined filters for items of interest
-* __/filtered-collections__ - Return items / item counts within a collection that satisfy a filter
-* __/filtered-items__ - Return items that match a metadata query
+* __[/metadataregistry](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/MetadataRegistryResource.java)__ - Return the Metadata Registry
+* __/[filters](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/FiltersResource.java)__ - Return a set of pre-defined filters for items of interest
+* __/[filtered-collections](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/FilteredCollectionsResource.java)__ - Return items / item counts within a collection that satisfy a filter
+* __/[filtered-items](https://github.com/Georgetown-University-Libraries/DSpaceRestQCReports/blob/master/dspace/modules/rest/src/main/java/org/dspace/rest/FilteredItemsResource.java)__ - Return items that match a metadata query
 
 # License 
 License information is contained below.
