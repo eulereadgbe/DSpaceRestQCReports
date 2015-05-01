@@ -78,15 +78,17 @@ public class FilteredCollection extends DSpaceObject {
         ItemFilterSet itemFilterSet = new ItemFilterSet(filters, reportItems);
         itemFilters = itemFilterSet.getItemFilters();
         
-        //TODO: Item paging. limit, offset/page
-        ItemIterator childItems;
-        if(limit != null && limit >= 0 && offset != null && offset >= 0) {
-            childItems = collection.getItems(limit, offset);
-        } else {
-            childItems = collection.getAllItems();
-        }
+        if (itemFilters.size() > 0) {
+            //TODO: Item paging. limit, offset/page
+            ItemIterator childItems;
+            if(limit != null && limit >= 0 && offset != null && offset >= 0) {
+                childItems = collection.getItems(limit, offset);
+            } else {
+                childItems = collection.getAllItems();
+            }
 
-        items = itemFilterSet.processSaveItems(context, childItems, true, expand);
+            items = itemFilterSet.processSaveItems(context, childItems, true, expand);            
+        }       
         
         if(!expandFields.contains("all")) {
             this.addExpand("all");

@@ -135,10 +135,10 @@ public class FilteredItemsResource {
     		@QueryParam("limit") @DefaultValue("100") Integer limit, @QueryParam("offset") @DefaultValue("0") Integer offset,
     		@QueryParam("userIP") String user_ip, @QueryParam("userAgent") String user_agent, @QueryParam("xforwarderfor") String xforwarderfor,
     		@QueryParam("filters") @DefaultValue("all_filters") String filters,
-            @QueryParam("query_field[]") @DefaultValue("dc.publisher") List<String> query_field,
-            @QueryParam("query_op[]") @DefaultValue("equals") List<String> query_op,
-            @QueryParam("query_val[]") @DefaultValue("foo") List<String> query_val,
-            @QueryParam("show_fields[]") @DefaultValue("foo") List<String> show_fields,
+            @QueryParam("query_field[]") @DefaultValue("dc.title") List<String> query_field,
+            @QueryParam("query_op[]") @DefaultValue("exists") List<String> query_op,
+            @QueryParam("query_val[]") @DefaultValue("") List<String> query_val,
+            @QueryParam("show_fields[]") @DefaultValue("") List<String> show_fields,
     		@Context HttpHeaders headers, @Context HttpServletRequest request) {
         org.dspace.core.Context context = null;
         try {
@@ -171,7 +171,7 @@ public class FilteredItemsResource {
                     sb.append(")");
                     
                     addOp(context, sql, params, field, op, val);
-                    itemFilterQueries.add(new ItemFilterQuery(field, op.valop, op.prepareVal(val)));
+                    itemFilterQueries.add(new ItemFilterQuery(field, op.disp, op.prepareVal(val)));
                 }
                 
                 sql.append(" limit ? offset ?");
