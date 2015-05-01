@@ -2,8 +2,6 @@
 
 A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Waudm-qAtWY/0.jpg)](http://www.youtube.com/watch?v=Waudm-qAtWY)
-
 ## Collections Filter Report
 
 This code illustrates a mechanism to filter DSpace items by use case and item properties.
