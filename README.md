@@ -2,7 +2,7 @@
 
 A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 
-[![Demonstration Video of Possible Report Tools](http://img.youtube.com/vi/HQbJoko_qdU/1.jpg)](http://www.youtube.com/watch?v=HQbJoko_qdU)
+[![Demonstration Video of Possible Report Tools](https://www.youtube.com/upload_thumbnail?v=HQbJoko_qdU&t=1&ts=1430523724558)](http://www.youtube.com/watch?v=HQbJoko_qdU)
 
 ## Collections Filter Report
 
