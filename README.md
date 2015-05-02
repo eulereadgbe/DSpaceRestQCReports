@@ -2,6 +2,8 @@
 
 A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 
+* See the dialog related to this use case [on the DSpace Wiki](https://wiki.duraspace.org/display/DSPACE/Admin+UI+-+Quality+Control+Reports)
+
 ## Demonstration Video
 [![Demonstration Video of Possible Report Tools](https://i.ytimg.com/s_vi/HQbJoko_qdU/1.jpg?sqp=CPyfkKoF&rs=AOn4CLBkrqihcmFQsMl3bgGA5iSOjzpMRQ)](http://www.youtube.com/watch?v=HQbJoko_qdU)
 
