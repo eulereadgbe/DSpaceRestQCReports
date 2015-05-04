@@ -5,7 +5,7 @@ A proposed reporting tool for DSpace based on the DSpace 4.x REST api.
 * See the dialog related to this use case [on the DSpace Wiki](https://wiki.duraspace.org/display/DSPACE/Admin+UI+-+Quality+Control+Reports)
 
 ## Demonstration Video
-[![Demonstration Video of Possible Report Tools](https://i.ytimg.com/s_vi/HQbJoko_qdU/1.jpg?sqp=CPyfkKoF&rs=AOn4CLBkrqihcmFQsMl3bgGA5iSOjzpMRQ)](http://www.youtube.com/watch?v=1Lxzqpq_3x4)
+[![Demonstration Video of Possible Report Tools](https://cloud.githubusercontent.com/assets/1111057/7463526/f3e34b22-f26e-11e4-9946-fe034c4cda51.png)](http://www.youtube.com/watch?v=1Lxzqpq_3x4)
 
 ## Collections Filter Report
 
